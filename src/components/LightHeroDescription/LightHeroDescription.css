@@ -1,0 +1,25 @@
+.light-description > main {
+    padding: 0.8em;
+}
+
+.light-description > header {
+    background-size: cover;
+    background-position: 0 25%;
+    height: 10em;;
+}
+
+.light-description > header > h2 {
+    display: block;
+    margin: 5px;;
+    padding: 0.2em;
+    color: #fff;
+    border-radius: 0.6em;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.light-description > header {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+}

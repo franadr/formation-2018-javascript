@@ -1,0 +1,106 @@
+.modal {
+    position: fixed;
+    z-index: 9999;
+    background-color: #fff;
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.7);
+
+    animation-name: centerAndEnlarge;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+    animation-duration: 1000ms;
+}
+
+.modal > .modal-thumbnail {
+    overflow: hidden;
+    animation: blur 1000ms forwards;
+}
+
+.modal > .modal-content {
+    padding: 0.8em;
+    animation: focus 1500ms forwards;
+}
+
+.modal > .modal-content > .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0.3em;
+    background: none;
+    border: 0;
+    font-size: 1.8em;
+    opacity: .5;
+}
+
+.modal > .modal-content > button.update-hero {
+    color: #fff;
+    border: 0;
+    background-color: #19A3FF;
+    box-shadow: 1px 2px 1px #137DC4;
+    padding: 0.4em;
+    font-size: 1.2em;
+}
+
+.modal > .modal-content > button.update-hero:hover {
+    cursor: pointer;
+}
+
+.modal > .modal-content > .modal-close:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+@keyframes centerAndEnlarge {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    33% {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    99% {
+        width: 90%;
+        height: 90vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    100% {
+        overflow-y: auto;
+        width: 90%;
+        height: 90vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+@keyframes blur {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+}
+
+@keyframes focus {
+    0%, 90% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,78 @@
+.hero-form {
+    position: fixed;
+    z-index: 9999;
+    background-color: #fff;
+    box-shadow: 0 0 0 9999px rgba(0,0,0,0.7);
+
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    opacity: 0;
+    animation-name: fadeInDown;
+    animation-fill-mode: forwards;
+    animation-duration: 500ms;
+}
+
+.hero-form > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-form > form > header {
+    background-color: #19A3FF;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-form > form > main {
+    box-shadow: 0 4px 12px 0 #ccc inset;
+}
+
+.hero-form > form > footer {
+    padding: 1.4em;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.hero-form > form > footer > button {
+    margin: 0 0.8em;
+    font-size: 1.2em;
+    padding: 0.4em;
+    color: #fff;
+    border: 0;
+}
+
+.hero-form > form > footer > button:hover {
+    cursor: pointer;
+}
+
+.hero-form > form > footer > button[type="submit"] {
+    background-color: #19A3FF;
+    box-shadow: 1px 2px 1px #137DC4;
+}
+
+.hero-form > form > footer > button[type="button"] {
+    background-color: #FFA83A;
+    box-shadow: 1px 2px 1px #C2802C;
+}
+
+@keyframes fadeInDown {
+    0% {
+        top: -50%;
+        opacity: 0;
+        transform: translate(-50%, 0);
+    }
+
+    100% {
+        top: 50%;
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+
+}

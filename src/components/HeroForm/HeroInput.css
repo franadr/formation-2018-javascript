@@ -1,0 +1,17 @@
+.hero-input  {
+    margin: 1em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-input > label {
+    margin: 0 0.8em;
+}
+
+.hero-input > input {
+    padding: 0.4em;
+    min-height: 1.8em;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
